@@ -4,6 +4,13 @@ export async function GET() {
   // Check if API key is configured
   const xaiConfigured = !!process.env.XAI_API_KEY
 
+   // Debug logging
+  console.log("Health Check - API Key Status:", {
+    hasKey: xaiConfigured,
+    keyLength: process.env.XAI_API_KEY?.length,
+    environment: process.env.NODE_ENV
+  })
+
   // Check if we can connect to the API
   let apiConnected = false
   let availableModels = []
