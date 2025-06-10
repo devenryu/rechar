@@ -3,7 +3,12 @@ import { type NextRequest, NextResponse } from "next/server"
 export async function POST(request: NextRequest) {
   try {
     const { data, chartType, isCSV } = await request.json()
-
+ // Debug logging for API key
+    console.log("API Key Status:", {
+      hasKey: !!process.env.XAI_API_KEY,
+      keyLength: process.env.XAI_API_KEY?.length,
+      environment: process.env.NODE_ENV
+    })
     // Check if API key is configured
     if (!process.env.XAI_API_KEY) {
       console.warn("XAI_API_KEY not configured, using fallback processing")
