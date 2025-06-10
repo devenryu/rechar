@@ -15,18 +15,8 @@ export const metadata: Metadata = {
         url: "/favicon.ico",
         sizes: "any",
       },
-      {
-        url: "/icon.png",
-        type: "image/png",
-        sizes: "32x32",
-      },
     ],
   },
-}
-
-export const metadata: Metadata = {
-  title: "Rechart - Excel-like Data Visualization",
-  description: "Transform your data into beautiful charts with AI-powered processing"
 }
 
 export default function RootLayout({
